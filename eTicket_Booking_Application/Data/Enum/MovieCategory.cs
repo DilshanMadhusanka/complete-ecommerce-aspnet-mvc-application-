@@ -1,4 +1,4 @@
-﻿namespace eTicket_Booking_Application.Data
+﻿namespace eTicket_Booking_Application.Data.Enum
 {
     public enum MovieCategory
     {

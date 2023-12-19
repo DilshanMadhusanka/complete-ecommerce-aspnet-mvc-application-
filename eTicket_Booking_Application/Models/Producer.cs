@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace eTicket_Booking_Application.Models
@@ -12,5 +13,9 @@ namespace eTicket_Booking_Application.Models
         public String Bio { get; set; }
 
 
+        // Relationships 
+        // producer can have multiple movies 
+
+        public List<Movie> Movies { get; set; }   // 1 to many ralationship
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace eTicket_Booking_Application.Models
 {
@@ -9,5 +10,12 @@ namespace eTicket_Booking_Application.Models
         public string  Logo { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
+
+
+
+        // Relationships 
+        // cinema can have mulptiple movies 
+
+        public List<Movie> Movies { get; set; }
     }
 }

@@ -2,6 +2,7 @@ using eTicket_Booking_Application.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,8 +25,9 @@ namespace eTicket_Booking_Application
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //DbContext Configuration 
-            services.AddDbContext<AppDbContext>();
+            //DbContext Configuration ( data base eka hadann kalin ha passe kali dekakt mek implement krane)
+            services.AddDbContext<AppDbContext>( options => options.UseSqlServer(Configuration.GetConnectionString
+                ("DefaultConnectionString")));
 
 
             services.AddControllersWithViews();

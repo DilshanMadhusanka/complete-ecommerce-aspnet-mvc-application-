@@ -8,5 +8,7 @@
         public int ActorId { get; set; }  // foreign key eka.actor table eken
         public Actor Actor { get; set; } // relationship eka. ( 1 to many)
 
+
+
     }
 }
